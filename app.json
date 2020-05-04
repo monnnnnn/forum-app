@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/write/write",
+    "pages/personal/personal",
+    "pages/detail/detail",
+    "pages/collect/collect",
+    "pages/my/my",
+    "pages/set/set",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "粤说论坛",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": { 
+    "selectedColor": "#6897bb",  
+    "list": [{
+      "iconPath": "images/home-black.png",
+      "selectedIconPath": "images/home-blue.png",  
+      "pagePath": "pages/home/home",
+      "text": "首页"
+    }, {
+      "iconPath": "images/write-black.png",
+      "selectedIconPath": "images/write-blue.png", 
+      "pagePath": "pages/write/write",
+      "text": "发帖"
+    }, {
+      "iconPath": "images/head-black.png",
+      "selectedIconPath": "images/head-blue.png", 
+      "pagePath": "pages/personal/personal",
+      "text": "个人"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

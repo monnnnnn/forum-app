@@ -1,0 +1,63 @@
+<view >
+    <view class="ret" bindtap="toHome">返回 |</view>
+    <view class="line"></view>
+    <view class="block">
+        <view class="user">
+            <view class="left">
+                <image class="imgHead" src="{{imgAddress}}" mode="aspectFill"></image>
+                <view >
+                    <view class="userId">{{userName}}</view>
+                    <view class="time">{{createTime}}</view>
+                </view>
+            </view>
+            <view class="btnAt" bindtap="toAttention" >+关注</view>
+        </view>
+        <view class="essay">
+            <view class="title">{{title}}</view>
+            <rich-text class="summary" nodes="{{context}}"></rich-text>
+        </view>
+        <view class="btn">
+            <text class="btn1" bindtap="toComment">评论</text>
+            <text class="btn1" bindtap="toDelete" style="color:red;border: 1rpx solid red;display:{{over}};">删除</text>
+            <text class="btn1" bindtap="btnReplay" style="color:red;border: 1rpx solid red;display:{{replay}};">举报</text>
+            <view style="color:{{collectColor}};" bindtap="toCollect">收藏：{{collectNum}}</view>
+            <view style="color:{{likeColor}};" bindtap="toLike">点赞：{{likesNum}}</view>
+        </view>
+        <modal hidden="{{hiddenmodalput}}" title="举报"  confirm-text="提交" cancel-text="取消" bindcancel="modalinput"  bindconfirm="toReplay">
+            <view class="border" >
+                <view class="title">
+                    <input value="{{replayContext}}" confirm-type="done" bindconfirm="toReplay" bindinput="formContext" placeholder="请输入举报原因~" />
+                </view>
+            </view>
+        </modal>
+    </view>
+    <view class="line"></view>
+    <view style="margin:200rpx 0">
+        <view class="comment">评论</view>
+        <view class="line"></view>
+        <block wx:for="{{commentList}}" wx:for-item="item">
+            <view class="block">
+                <view class="left">
+                    <image class="imgHead" src="{{item.imgAddress}}" mode="aspectFill"></image>
+                    <view >
+                        <view class="userId">{{item.commentatorName}}</view>
+                        <view class="time">{{item.createTime}}</view>
+                    </view>
+                </view>
+                <view class="essay"><text wx:if="{{item.targetName != null}}">回复{{item.targetName}}：</text>{{item.context}}</view>
+                <view class="btnReplay" bindtap="toReplay" data-index="{{item.commentId}}">回复</view>
+            </view>
+        </block>
+    </view>
+    <view class="bottom">
+        <view class="comment">评论：<text>{{toCommentId}}</text></view>
+        <view class="inputBody">
+            <view class="border" >
+                <view class="title">
+                    <input value="{{comment}}" focus="{{inputShow}}" adjust-position="true" confirm-type="send" bindconfirm="toSubmit" bindinput="formComment" placeholder="说点什么吧~" />
+                </view>
+            </view>
+            <view class="btn1" bindtap="toSubmit" style="width:60rpx;height:40rpx;margin-top:10rpx">确定</view>
+        </view>
+    </view>
+</view>

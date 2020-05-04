@@ -1,0 +1,16 @@
+.login {
+    padding: 16% 0;
+}
+.border {
+    margin: 50rpx 100rpx;
+    border: 1rpx solid #eee;
+    border-radius: 20rpx;
+}
+.title {
+    padding: 20rpx 30rpx;
+}
+.btnRegister {
+    margin: 50rpx 100rpx;
+    background-color: #4d8bb9;
+    color: #FFFFFF;
+}

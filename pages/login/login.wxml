@@ -1,0 +1,14 @@
+<view class="login">
+    <view class="border">
+        <view class="title">
+            <input  maxlength="20" placeholder="请输入账号~" value="{{userId}}" bindinput="formUserId"/>
+        </view>
+    </view>
+    <view class="border">
+        <view class="title">
+            <input  maxlength="20" placeholder="请输入密码~" value="{{password}}" bindinput="formPassword"/>
+        </view>
+    </view>
+    <button class="btnLogin" bindtap="toLogin">登录</button>
+    <view class="toRegister" bindtap="toRegister">没有账号？注册</view>
+</view>

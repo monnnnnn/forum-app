@@ -1,0 +1,40 @@
+
+<view class="bg">
+    <view class="border">
+        <view class="search">
+            <input maxlength="20" placeholder="输入你想搜索的内容吧~" value="{{title}}" bindinput="formTitle" />
+        </view>
+        <icon type="search" size="20" bindtap="toSearch"/>
+    </view>
+    <view class="section">
+        <view bindtap="toRecommend">推荐</view>
+        <view bindtap="toAttention">关注</view>
+        <picker bindchange="bindSectionChange" value="{{sectionIndex}}" range="{{sectionArray}}">
+            <view class="picker">
+            {{sectionArray[sectionIndex]}}
+            </view>
+        </picker>          
+    </view>
+    <view class="line"></view>
+    <block wx:for="{{invitation}}" wx:for-item="item">
+        <view class="block" bindtap="toDetail" data-index="{{item.invitationId}}">
+            <view class="user">
+                <image class="imgHead" src="{{item.userImgAddress}}" mode="aspectFill"></image>
+                <view >
+                    <view class="userId">{{item.userName}}</view>
+                    <view class="time">{{item.createTime}}</view>
+                </view>
+            </view>
+            <view class="essay">
+                <view class="title">{{item.title}}</view>
+                <view class="summary">{{item.introduce}}</view>
+                <image class="img" wx:if="{{item.imgUrl != '' && item.imgUrl != null}}" src="{{item.imgUrl}}" mode="aspectFill"></image>
+            </view>
+            <view class="btn">
+                <view >评论：{{item.commentNum}}</view>
+                <view >点赞：{{item.likeNum}}</view>
+                <view >浏览：{{item.pageView}}</view>
+            </view>
+        </view>
+    </block>
+</view>

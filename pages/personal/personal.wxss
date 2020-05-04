@@ -1,0 +1,55 @@
+.userinfo {
+    display: flex;
+    justify-content: space-between;
+}
+.img {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+.username {
+    font-size: 18px;
+    margin: 36rpx 20rpx;
+}
+.btn1Font {
+    font-size: 12px;
+    color: #fff;
+}
+.btn1 {
+    width: 180rpx;
+    height: 65rpx;
+    font-size: 12px;
+    color: #fff;
+    margin: 30rpx;
+    background-color: #4d8bb9;
+    border: 1rpx solid #4d8bb9;
+    border-radius: 30rpx;
+}
+.btn1::after {
+    border-radius: 30rpx;
+    border: 1rpx solid #4d8bb9;
+  }
+  
+.btn1-hover {
+    background-color: #6897bb;
+}
+
+.btn2 {
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    padding-left: 20rpx;
+    align-items: center;
+    
+}
+.btn2Font {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+.line{
+    width:100%;   
+    height:2rpx;
+    margin-top: 10rpx;   
+    background:#eee;   
+}

@@ -1,0 +1,36 @@
+<view >
+    <view class="ret" bindtap="toPersonal">返回 |</view>
+    <view class="line"></view>
+    <view>
+        <view class='imgArr'>
+            <view name="file" class='addImg' bindtap='chooseImage'>
+                <image class='addImg' src='{{imgAddress}}' mode='aspectFill' />
+            </view>
+        </view>
+        <view class="username">
+            <view style="margin:20rpx;">昵称：</view>
+            <view class="border" >
+                <view class="title">
+                    <input value="{{userName}}" confirm-type="send" bindinput="formUserName" placeholder="" />
+                </view>
+            </view>
+        </view>
+        <view class="username">
+            <view style="margin:20rpx;">邮箱：</view>
+            <view class="border" >
+                <view class="title">
+                    <input value="{{email}}" confirm-type="send" bindinput="formEmail" placeholder="" />
+                </view>
+            </view>
+        </view>
+        <view class="username">
+            <view style="margin:20rpx;">密码：</view>
+            <view class="border" >
+                <view class="title">
+                    <input value="{{password}}" confirm-type="send" bindinput="formPassword" placeholder="密码修改/不填就是不修改" />
+                </view>
+            </view>
+        </view>
+        <button bindtap="onSubmit" class="btnSubmit"> 确定 </button>
+    </view>
+</view>

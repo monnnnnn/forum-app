@@ -1,0 +1,23 @@
+<view class="login">
+    <view class="border">
+        <view class="title">
+            <input  maxlength="20" placeholder="请输入账号~" value="{{userId}}" bindinput="formUserId"/>
+        </view>
+    </view>
+    <view class="border">
+        <view class="title">
+            <input  maxlength="20" placeholder="请输入邮箱~" value="{{email}}" bindinput="formEmail"/>
+        </view>
+    </view>
+    <view class="border">
+        <view class="title">
+            <input  maxlength="20" placeholder="请输入密码~" value="{{password}}" bindinput="formPassword"/>
+        </view>
+    </view>
+    <view class="border">
+        <view class="title">
+            <input  maxlength="20" placeholder="请再次输入密码~" value="{{password1}}" bindinput="formPassword1"/>
+        </view>
+    </view>
+    <button class="btnRegister" bindtap="toRegister">注册</button>
+</view>
